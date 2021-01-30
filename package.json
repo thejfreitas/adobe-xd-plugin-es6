@@ -1,4 +1,13 @@
 {
+  "name": "adobe-xd-plugin-modern-react-boilerplate",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "watch": "nodemon -w src -e js,jsx,css,scss -w webpack.config.js -x yarn build",
+    "build": "webpack --mode development"
+  },
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
