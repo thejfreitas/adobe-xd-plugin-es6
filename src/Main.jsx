@@ -6,18 +6,23 @@ let panel
 function loadPanel() {
   if (panel == null) {
     panel = document.createElement('panel')
-    ReactDOM.render(<MainPanel />, panel)
   }
 
   return panel
 }
 
+function renderPanel(panel) {
+  ReactDOM.render(<MainPanel />, panel)
+}
+
 function show(event) {
   event.node.appendChild(loadPanel())
+
+  renderPanel(panel)
 }
 
 function update() {
-  ReactDOM.render(<MainPanel />, panel)
+  renderPanel(panel)
 }
 
 function hide(event) {
