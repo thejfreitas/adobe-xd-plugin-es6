@@ -13,12 +13,14 @@ const Form = ({ dialog }) => {
 
   return (
     <form>
-      <h1>React with JSX Components</h1>
-      <label>
-        <span>Tell me your name</span>
+      <header>
+        <sp-heading size="M">React with JSX Components</sp-heading>
+      </header>
+      <sp-label>Tell me your name</sp-label>
+      <sp-body size="M">
         <input onChange={(event) => onInputChange(event)} />
-      </label>
-      <p>{`Hello ${name}`}</p>
+      </sp-body>
+      <sp-body size="M">{`Hello ${name}`}</sp-body>
       <footer>
         <sp-button onClick={() => closeDialog()}>Done</sp-button>
       </footer>

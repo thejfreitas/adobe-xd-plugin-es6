@@ -18,7 +18,8 @@ const MainPanel = () => {
 
   return (
     <>
-      <p>Main Panel</p>
+      <sp-heading size="M">Main Panel</sp-heading>
+      <sp-body size="S">This is the panel's content.</sp-body>
       <sp-button onClick={() => openDialog()}>Open the dialog</sp-button>
     </>
   )
