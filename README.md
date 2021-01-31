@@ -39,3 +39,9 @@ yarn watch
 ```
 
 Webpack will watch every file modification and will compile to a new bundle in `main.js` file. You must reload your plugin on Adobe XD to make your modifications take effect.
+
+## Debugging
+
+It's possible debug the plugin using Chrome Dev Tools (You must use Chrome).
+
+You will find the configuration file `debug.json` and all details to enable the debugging mode can be found on the [Abode XD Documentation](https://adobexdplatform.com/plugin-docs/tutorials/debugging/#2-launch-chrome-devtools)
