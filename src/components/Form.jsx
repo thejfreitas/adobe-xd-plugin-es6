@@ -12,17 +12,15 @@ const Form = ({ dialog }) => {
   }
 
   return (
-    <form style={{ width: 300 }}>
+    <form>
       <h1>React with JSX Components</h1>
       <label>
-        <span>What is your name?</span>
+        <span>Tell me your name</span>
         <input onChange={(event) => onInputChange(event)} />
       </label>
       <p>{`Hello ${name}`}</p>
       <footer>
-        <button type="submit" uxp-variant="cta" onClick={() => closeDialog()}>
-          Done
-        </button>
+        <sp-button onClick={() => closeDialog()}>Done</sp-button>
       </footer>
     </form>
   )
