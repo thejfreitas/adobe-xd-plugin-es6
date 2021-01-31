@@ -16,14 +16,14 @@ function show(event) {
   event.node.appendChild(loadPanel())
 }
 
-function hide(event) {
-  event.node.firstChild.remove()
-}
-
 function update() {
   ReactDOM.render(<MainPanel />, panel)
 }
 
+function hide(event) {
+  event.node.firstChild.remove()
+}
+
 export const panels = {
-  showPanel: { show, hide, update },
+  showPanel: { show, update, hide },
 }
