@@ -1,6 +1,6 @@
 # Adobe XD plugin using modern React boilerplate
 
-A Adobe XD plugin sample using modern React. Currently supporting React v17.0.1
+A Adobe XD plugin sample using modern React. Currently supporting React v17.0.2
 
 [Official Adobe XD Documentation](https://adobexdplatform.com/plugin-docs/)
 
@@ -29,7 +29,7 @@ yarn add react react-dom
 #### Development dependencies
 
 ```
-yarn add @babel/cli  @babel/core  @babel/node  @babel/plugin-transform-react-jsx  @babel/polyfill  @babel/preset-env  babel-loader  nodemon  webpack  webpack-cli --dev
+yarn add -D @babel/cli  @babel/core  @babel/node  @babel/plugin-transform-react-jsx  @babel/polyfill  @babel/preset-env  babel-loader  nodemon  webpack  webpack-cli --dev
 ```
 
 ### 3. Start compiling
