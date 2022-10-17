@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Form = ({ dialog }) => {
-  const [name, setName] = useState('')
+  const [name, setName] = useState('');
 
   const onInputChange = (event) => {
-    setName(event.target.value)
-  }
+    setName(event.target.value);
+  };
 
   const closeDialog = () => {
-    dialog.close()
-  }
+    dialog.close();
+  };
 
   return (
     <form>
@@ -25,7 +25,7 @@ const Form = ({ dialog }) => {
         <sp-button onClick={() => closeDialog()}>Done</sp-button>
       </footer>
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
