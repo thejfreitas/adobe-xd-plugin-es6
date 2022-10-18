@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Form from '../components/Form.jsx';
 
 const MainPanel = () => {
   const [dialog, setDialog] = useState(null);
+  const [root, setRoot] = useState(null);
 
   useEffect(() => {
     if (!dialog) {
-      setDialog(document.createElement('dialog'));
+      const innerDialog = document.createElement('dialog');
+      setRoot(createRoot(innerDialog));
+      setDialog(innerDialog);
     }
-
-    return () => {
-      setDialog(null);
-      document.removeChild('dialog');
-    };
   }, []);
 
-  const openDialog = () => {
-    ReactDOM.render(<Form dialog={dialog} />, dialog);
+  const openDialog = (root) => {
+    root.render(<Form dialog={dialog} />);
     document.body.appendChild(dialog).showModal();
   };
 
@@ -25,7 +23,7 @@ const MainPanel = () => {
     <>
       <sp-heading size="M">Main Panel</sp-heading>
       <sp-body size="S">This is the panel's content.</sp-body>
-      <sp-button onClick={() => openDialog()}>Open the dialog</sp-button>
+      {root && <sp-button onClick={() => openDialog(root)}>Open the dialog</sp-button>}
     </>
   );
 };

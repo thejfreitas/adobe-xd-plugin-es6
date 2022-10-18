@@ -1,18 +1,22 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import MainPanel from './components/MainPanel.jsx'
 
 let panel
+let root
 function loadPanel() {
   if (panel == null) {
     panel = document.createElement('panel')
+    root = createRoot(panel)
   }
 
   return panel
 }
 
 function renderPanel(panel) {
-  ReactDOM.render(<MainPanel />, panel)
+  if (root) {
+    root.render(<MainPanel />)
+  }
 }
 
 function show(event) {
